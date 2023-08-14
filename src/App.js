@@ -1,3 +1,5 @@
+import GownCard from "./GownCard";
+
 const gownsList = [
   {
     id: 0,
@@ -61,14 +63,7 @@ function App() {
   return (
     <div>
      <h1>My Gowns of Love Project</h1>
-     { gownsList.map ( gown => (
-      <div>
-      <h4>{gown.name}</h4>
-      <p>{gown.color}</p>
-      <p>{gown.category}</p>
-      
-      </div>
-      ) ) }
+     { gownsList.map ( g => <GownCard gown={g}/> ) }
     </div>
   );
 }
